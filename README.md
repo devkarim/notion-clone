@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Notion Clone
 
-## Getting Started
+## Overview
 
-First, run the development server:
+A note taking web application. This web application is a clone of Notion so the information generated is not genuine. This application is **not intended** for commercial use.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Visit the website from [here](https://motion.karimwael.com).
+
+This project is inspired by this [video](https://www.youtube.com/watch?v=0OaDyjB9Ib8) ❤️
+
+## Features
+
+- To be added.
+
+## Technologies
+
+- [React.js](https://react.dev)
+- [Next.js 14](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Zod](https://zod.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Prisma](https://www.prisma.io)
+- [NextAuth.js](https://next-auth.js.org)
+- [Zustand](https://github.com/pmndrs/zustand)
+- [react-hook-form](https://react-hook-form.com)
+- [react-toastify](https://fkhadra.github.io/react-toastify)
+- [shadcn/ui](https://ui.shadcn.com)
+
+## Prerequisites
+
+#### - Node 18.17.1
+
+### Cloning this repo
+
+Clone the repo and navigate to it:
+
+- `git clone https://github.com/devkarim/notion-clone.git`
+- `cd notion-clone`
+
+### Install required packages
+
+Use one of the following commands to install the packages:
+
+- `npm i`
+- `yarn`
+- `pnpm i`
+
+### Setup .env file
+
+These environment variables are required for the app to work:
+
+```
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can check [.env.example](https://github.com/devkarim/notion-clone/blob/main/.env.example) for more information.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Push changes to database and generate PrismaClient
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Use this to push and generate PrismaClient:
 
-## Learn More
+`npx prisma db push`
 
-To learn more about Next.js, take a look at the following resources:
+### Start development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use one of the following commands to start the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `npm run dev`
+- `yarn dev`
+- `pnpm dev`
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is made by [@devkarim](https://github.com/devkarim).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the [MIT](https://github.com/devkarim/notion-clone/blob/main/LICENSE.md) License - feel free to explore, modify, and share.
