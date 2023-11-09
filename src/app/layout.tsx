@@ -1,11 +1,20 @@
 import type { Metadata } from 'next';
-import { Open_Sans } from 'next/font/google';
+import { Open_Sans, Damion } from 'next/font/google';
 import './globals.css';
 
 import { APP_NAME, APP_URL } from '@/config/constants';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 
-const font = Open_Sans({ subsets: ['latin'] });
+const sans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const serif = Damion({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-serif',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
@@ -23,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>
+      <body className={`${sans.variable} ${serif.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           {children}
         </ThemeProvider>
