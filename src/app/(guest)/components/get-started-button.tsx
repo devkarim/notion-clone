@@ -1,5 +1,9 @@
-import { Button, ButtonProps } from '@/components/ui/button';
+'use client';
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+
+import { Button, ButtonProps } from '@/components/ui/button';
 
 interface GetStartedButtonProps extends ButtonProps {
   showArrow?: boolean;
@@ -10,13 +14,10 @@ const GetStartedButton: React.FC<GetStartedButtonProps> = ({
   ...props
 }) => {
   return (
-    <Button size="sm" {...props}>
-      Get Motion free{' '}
-      {showArrow && (
-        <span className="ml-2">
-          <ArrowRight className="w-4 h-4" />
-        </span>
-      )}
+    <Button asChild variant="secondary" size="sm" {...props}>
+      <Link href="/signup">
+        Get Motion free {showArrow && <ArrowRight className="ml-2 w-4 h-4" />}
+      </Link>
     </Button>
   );
 };
