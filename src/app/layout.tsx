@@ -1,6 +1,8 @@
+import './globals.css';
+
 import type { Metadata } from 'next';
 import { Open_Sans, Damion } from 'next/font/google';
-import './globals.css';
+import { Toaster } from 'react-hot-toast';
 
 import { APP_NAME, APP_URL } from '@/config/constants';
 import { ThemeProvider } from '@/components/providers/theme-provider';
@@ -34,6 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${sans.variable} ${serif.variable} font-sans`}>
         <ThemeProvider attribute="class" defaultTheme="dark">
+          <Toaster />
           {children}
         </ThemeProvider>
       </body>
